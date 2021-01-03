@@ -1,5 +1,5 @@
 {% set name = "jupyterlab_commands" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9fc01f7ab0bafe889be8db9d12faf7428199fd29c90ff0bdff94f2f1090504c2
+  sha256: 9ce9c2542fcb5715ae710c12ea87105e1e1bb7606fbe584d3aed5e3af2d41f0a
 
 build:
   number: 0
