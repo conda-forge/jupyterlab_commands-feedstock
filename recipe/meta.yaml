@@ -1,5 +1,5 @@
 {% set name = "jupyterlab_commands" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 973c3fef0f6fb0a29403dfabc47ac83489ed43b593ff9867840c9e2d0ee3b75b
+  sha256: 210c851ee4c7439ac593018542c599a9085e459bc1bc1fb3ea92d2a9bf3e11ff
 
 build:
   number: 0
@@ -15,20 +15,17 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - jupyterlab >=3.0.0
-    - nodejs >=14
-    - sysroot_linux-64 2.17  # [linux64]
   host:
     - python >=3.7
     - pip
-    - nodejs >=14
+    - nodejs >=16
     - yarn
-    - jupyter-packaging
+    - hatchling
+    - hatch-jupyter-builder
+    - jupyterlab >=4,<5
   run:
     - python >=3.7
-    - jupyterlab >=3.0.0
-    - notebook >=6.0.3
+    - jupyterlab >=4,<5
 
 test:
   imports:
