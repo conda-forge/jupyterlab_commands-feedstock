@@ -17,18 +17,17 @@ build:
 requirements:
   build:
     - jupyterlab >=3.0.0
-    - nodejs >=14
+    - nodejs >=16
     - sysroot_linux-64 2.17  # [linux64]
   host:
     - python >=3.7
     - pip
-    - nodejs >=14
+    - nodejs >=16
     - yarn
     - jupyter-packaging
   run:
     - python >=3.7
-    - jupyterlab >=3.0.0
-    - notebook >=6.0.3
+    - jupyterlab >=4,<5
 
 test:
   imports:
