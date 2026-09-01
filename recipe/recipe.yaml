@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - nodejs >=16
     - yarn
@@ -38,9 +38,6 @@ tests:
       python_version:
         - ${{ python_min }}
         - "*"
-  - requirements:
-      run:
-        - python ${{ python_min }}
 
 about:
   license: Apache-2.0
